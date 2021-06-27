@@ -1,3 +1,3 @@
 # mc-compose
 
-A docker compose file to bring up my minecraft server
+A Dockerfile defining the container for the Minecraft server, a docker-compose file to bring it up, and any accompanying scripts.

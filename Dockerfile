@@ -1,0 +1,9 @@
+# Docker image definition for a Vanilla Minecraft Spigot Server
+# Basically just Java 16 runtime and Git for BuildTools
+FROM openjdk:16.0.1-slim
+LABEL maintainer="Kevin Koffroth <ktkoffroth@gmail.com>"
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update -q && \
+    apt-get upgrade -yq && \
+    apt-get install -yq git wget
+CMD ["bash"]

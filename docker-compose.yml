@@ -1,0 +1,24 @@
+version: "3.9"
+
+# Bridge Network for MC server and any related services
+networks:
+    bridge-network:
+      external:
+        name: bridge-network  
+
+# Services definition
+services:
+    # Minecraft server 
+    mc:
+        image: "ktkoffroth/spigot-mc:0.4"
+        restart: always
+        stdin_open: true
+        tty: true
+        networks:
+            - bridge-network
+        volumes: 
+            - /media/ktkoffroth/NAS/MC:/root/MC
+            - ./scripts:/root/scripts
+        ports:
+            - "25565:25565"
+        entrypoint: /root/scripts/entrypoint.sh
