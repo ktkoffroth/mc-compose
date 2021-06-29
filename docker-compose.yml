@@ -14,6 +14,7 @@ services:
         restart: always
         stdin_open: true
         tty: true
+        env_file: ./env/mc-variables.env
         networks:
             - bridge-network
         volumes: 
