@@ -5,6 +5,7 @@
 cd /root/MC/BuildTools/
 wget -N https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 git config --global --unset core.autocrlf
+rm -rf apache-maven-3.6.0 BuildData Bukkit CraftBukkit Spigot work BuildTools.log.txt
 java -jar BuildTools.jar --rev 1.17
 
 # move server .jar to server files directory, overwriting if necessary
