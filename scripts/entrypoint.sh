@@ -11,6 +11,7 @@ java -jar BuildTools.jar --rev $VANILLA_VERSION
 # move server .jar to server files directory, overwriting if necessary
 mv -u spigot-$VANILLA_VERSION.jar ../Spigot-Vanilla/spigot-$VANILLA_VERSION.jar
 
-# move to server files directory and run start command
+# move to server files directory, edit start.sh for AutoRestart plugin, and run start command
 cd ../Spigot-Vanilla
+sed -i "s/^java.*/java -Xms2G -Xmx2G -XX:+UseG1GC -jar spigot-$VANILLA_VERSION.jar/" ./start.sh
 java -Xms2G -Xmx2G -XX:+UseG1GC -jar spigot-$VANILLA_VERSION.jar
