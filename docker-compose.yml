@@ -18,7 +18,7 @@ services:
         networks:
             - bridge-network
         volumes: 
-            - /media/ktkoffroth/NAS/MC:/root/MC
+            - ../MC:/root/MC
             - ./scripts:/root/scripts
         ports:
             - "25565:25565"
