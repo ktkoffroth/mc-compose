@@ -10,7 +10,7 @@ networks:
 services:
     # Minecraft server 
     mc:
-        image: "ktkoffroth/spigot-mc:0.4"
+        image: "ktkoffroth/spigot-mc:0.6"
         restart: always
         stdin_open: true
         tty: true
